@@ -1,3 +1,1 @@
-import { Notion } from "./notion";
-
-console.log(Notion());
+console.log("Do things here soon");
