@@ -7,11 +7,7 @@ const notion = new Client({ auth: process.env.NOTION_SECRET });
 
 const databaseId = process.env.NOTION_DATABASE;
 
-export const AddItemToNotion = async (
-  text: string,
-  user: string,
-  tag: string
-) => {
+export const AddItemToNotion = async (text, user, tag) => {
   try {
     if (databaseId) {
       const response = await notion.pages.create({
@@ -47,7 +43,7 @@ export const AddItemToNotion = async (
     } else {
       console.log("Database ID unspecified.");
     }
-  } catch (error: any) {
+  } catch (error) {
     console.error(error.body);
   }
 };
