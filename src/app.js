@@ -72,6 +72,7 @@ app.post("/interactions", async function (req, res) {
   }
 });
 
+// Had to add this because ngrok was crying
 app.get("/", (req, res) => res.send("Hello World!"));
 
 app.listen(PORT, () => {
